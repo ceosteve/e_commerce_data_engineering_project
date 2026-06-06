@@ -1,0 +1,30 @@
+{
+  "id": 24,
+  "products": [
+    {
+      "id": 117,
+      "title": "Sportbike Motorcycle",
+      "price": 7499.99,
+      "quantity": 4,
+      "total": 29999.96,
+      "discountPercentage": 11.58,
+      "discountedTotal": 26525.96,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/thumbnail.webp"
+    },
+    {
+      "id": 128,
+      "title": "Realme C35",
+      "price": 149.99,
+      "quantity": 2,
+      "total": 299.98,
+      "discountPercentage": 15.3,
+      "discountedTotal": 254.08,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp"
+    }
+  ],
+  "total": 30299.94,
+  "discountedTotal": 26780.04,
+  "userId": 24,
+  "totalProducts": 2,
+  "totalQuantity": 6
+}

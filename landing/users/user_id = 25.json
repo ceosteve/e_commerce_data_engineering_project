@@ -1,0 +1,70 @@
+{
+  "id": 25,
+  "firstName": "Harper",
+  "lastName": "Kelly",
+  "maidenName": "Evans",
+  "age": 28,
+  "gender": "female",
+  "email": "harper.kelly@x.dummyjson.com",
+  "phone": "+92 518-863-2863",
+  "username": "harpere",
+  "password": "harperepass",
+  "birthDate": "1997-3-3",
+  "image": "https://dummyjson.com/icon/harpere/128",
+  "bloodGroup": "AB-",
+  "height": 184.32,
+  "weight": 81.69,
+  "eyeColor": "Amber",
+  "hair": {
+    "color": "Red",
+    "type": "Curly"
+  },
+  "ip": "174.111.61.162",
+  "address": {
+    "address": "1591 Adams Street",
+    "city": "Philadelphia",
+    "state": "New York",
+    "stateCode": "NY",
+    "postalCode": "69521",
+    "coordinates": {
+      "lat": -26.832913,
+      "lng": -75.445017
+    },
+    "country": "United States"
+  },
+  "macAddress": "b:ff:33:67:94:e4",
+  "university": "Boston College",
+  "bank": {
+    "cardExpire": "06/27",
+    "cardNumber": "4488823564436432",
+    "cardType": "Visa",
+    "currency": "EUR",
+    "iban": "ES5874149276753342261515"
+  },
+  "company": {
+    "department": "Legal",
+    "name": "Leffler, Rolfson and Becker",
+    "title": "Business Development Manager",
+    "address": {
+      "address": "16 Maple Street",
+      "city": "Austin",
+      "state": "North Carolina",
+      "stateCode": "NC",
+      "postalCode": "68274",
+      "coordinates": {
+        "lat": -15.423746,
+        "lng": 149.298887
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "592-557",
+  "ssn": "209-544-548",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

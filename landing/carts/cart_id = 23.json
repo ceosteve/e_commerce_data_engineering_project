@@ -1,0 +1,30 @@
+{
+  "id": 23,
+  "products": [
+    {
+      "id": 127,
+      "title": "Oppo K1",
+      "price": 299.99,
+      "quantity": 5,
+      "total": 1499.95,
+      "discountPercentage": 18.29,
+      "discountedTotal": 1225.61,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp"
+    },
+    {
+      "id": 134,
+      "title": "Vivo S1",
+      "price": 249.99,
+      "quantity": 4,
+      "total": 999.96,
+      "discountPercentage": 10.17,
+      "discountedTotal": 898.26,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp"
+    }
+  ],
+  "total": 2499.91,
+  "discountedTotal": 2123.87,
+  "userId": 23,
+  "totalProducts": 2,
+  "totalQuantity": 9
+}

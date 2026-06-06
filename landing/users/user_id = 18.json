@@ -1,0 +1,70 @@
+{
+  "id": 18,
+  "firstName": "Logan",
+  "lastName": "Torres",
+  "maidenName": "",
+  "age": 32,
+  "gender": "male",
+  "email": "logan.torres@x.dummyjson.com",
+  "phone": "+81 507-434-8733",
+  "username": "logant",
+  "password": "logantpass",
+  "birthDate": "1993-10-26",
+  "image": "https://dummyjson.com/icon/logant/128",
+  "bloodGroup": "A+",
+  "height": 190.04,
+  "weight": 72.43,
+  "eyeColor": "Green",
+  "hair": {
+    "color": "Green",
+    "type": "Curly"
+  },
+  "ip": "155.98.15.162",
+  "address": {
+    "address": "907 Seventh Street",
+    "city": "Columbus",
+    "state": "Arkansas",
+    "stateCode": "AR",
+    "postalCode": "78805",
+    "coordinates": {
+      "lat": -64.846516,
+      "lng": 174.775744
+    },
+    "country": "United States"
+  },
+  "macAddress": "40:d:5c:1:7d:bf",
+  "university": "University of Illinois--Urbana-Champaign",
+  "bank": {
+    "cardExpire": "04/30",
+    "cardNumber": "6258651210557142",
+    "cardType": "UnionPay",
+    "currency": "EUR",
+    "iban": "ES1171429445321693077621"
+  },
+  "company": {
+    "department": "Training",
+    "name": "Jast - Nader",
+    "title": "Data Analyst",
+    "address": {
+      "address": "947 Main Street",
+      "city": "Denver",
+      "state": "Minnesota",
+      "stateCode": "MN",
+      "postalCode": "71896",
+      "coordinates": {
+        "lat": -24.654063,
+        "lng": -147.255268
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "576-218",
+  "ssn": "806-639-934",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

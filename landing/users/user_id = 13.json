@@ -1,0 +1,70 @@
+{
+  "id": 13,
+  "firstName": "Noah",
+  "lastName": "Hernandez",
+  "maidenName": "",
+  "age": 41,
+  "gender": "male",
+  "email": "noah.hernandez@x.dummyjson.com",
+  "phone": "+49 393-605-6968",
+  "username": "noahh",
+  "password": "noahhpass",
+  "birthDate": "1984-6-5",
+  "image": "https://dummyjson.com/icon/noahh/128",
+  "bloodGroup": "AB+",
+  "height": 188.62,
+  "weight": 69.49,
+  "eyeColor": "Brown",
+  "hair": {
+    "color": "Red",
+    "type": "Curly"
+  },
+  "ip": "169.154.126.57",
+  "address": {
+    "address": "1413 Maple Street",
+    "city": "New York",
+    "state": "North Dakota",
+    "stateCode": "ND",
+    "postalCode": "73696",
+    "coordinates": {
+      "lat": -25.0377,
+      "lng": -151.70469
+    },
+    "country": "United States"
+  },
+  "macAddress": "d4:fe:ae:8f:eb:a3",
+  "university": "New York University (NYU)",
+  "bank": {
+    "cardExpire": "03/30",
+    "cardNumber": "6262462852322850",
+    "cardType": "UnionPay",
+    "currency": "PKR",
+    "iban": "DE13437032020581217601"
+  },
+  "company": {
+    "department": "Engineering",
+    "name": "Botsford, Marquardt and Roberts",
+    "title": "Database Administrator",
+    "address": {
+      "address": "62 Third Street",
+      "city": "Seattle",
+      "state": "Oregon",
+      "stateCode": "OR",
+      "postalCode": "83474",
+      "coordinates": {
+        "lat": 19.490447,
+        "lng": -13.173207
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "877-628",
+  "ssn": "660-847-389",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "moderator"
+}

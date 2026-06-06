@@ -1,0 +1,70 @@
+{
+  "id": 20,
+  "firstName": "Jackson",
+  "lastName": "Evans",
+  "maidenName": "",
+  "age": 35,
+  "gender": "male",
+  "email": "jackson.evans@x.dummyjson.com",
+  "phone": "+44 468-628-6686",
+  "username": "jacksone",
+  "password": "jacksonepass",
+  "birthDate": "1990-11-30",
+  "image": "https://dummyjson.com/icon/jacksone/128",
+  "bloodGroup": "O-",
+  "height": 162.57,
+  "weight": 74.37,
+  "eyeColor": "Green",
+  "hair": {
+    "color": "Red",
+    "type": "Straight"
+  },
+  "ip": "221.127.144.198",
+  "address": {
+    "address": "1873 Main Street",
+    "city": "New York",
+    "state": "Arkansas",
+    "stateCode": "AR",
+    "postalCode": "26600",
+    "coordinates": {
+      "lat": 34.722451,
+      "lng": 63.448927
+    },
+    "country": "United States"
+  },
+  "macAddress": "81:14:1:97:88:85",
+  "university": "Ohio State University",
+  "bank": {
+    "cardExpire": "07/30",
+    "cardNumber": "376760688512826",
+    "cardType": "American Express",
+    "currency": "GBP",
+    "iban": "GB27CM0H0MNPXSPDGA0A1O"
+  },
+  "company": {
+    "department": "Legal",
+    "name": "Kuhlman LLC",
+    "title": "Web Developer",
+    "address": {
+      "address": "1706 First Street",
+      "city": "Chicago",
+      "state": "Hawaii",
+      "stateCode": "HI",
+      "postalCode": "34725",
+      "coordinates": {
+        "lat": -80.416937,
+        "lng": -83.224516
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "843-260",
+  "ssn": "248-787-886",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

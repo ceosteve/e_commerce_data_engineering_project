@@ -1,0 +1,70 @@
+{
+  "id": 14,
+  "firstName": "Charlotte",
+  "lastName": "Lopez",
+  "maidenName": "Martinez",
+  "age": 37,
+  "gender": "female",
+  "email": "charlotte.lopez@x.dummyjson.com",
+  "phone": "+44 373-953-5028",
+  "username": "charlottem",
+  "password": "charlottempass",
+  "birthDate": "1988-6-8",
+  "image": "https://dummyjson.com/icon/charlottem/128",
+  "bloodGroup": "AB-",
+  "height": 178.92,
+  "weight": 82.46,
+  "eyeColor": "Brown",
+  "hair": {
+    "color": "Gray",
+    "type": "Kinky"
+  },
+  "ip": "119.103.95.60",
+  "address": {
+    "address": "208 Second Street",
+    "city": "Columbus",
+    "state": "Ohio",
+    "stateCode": "OH",
+    "postalCode": "42044",
+    "coordinates": {
+      "lat": -44.443762,
+      "lng": -151.420561
+    },
+    "country": "United States"
+  },
+  "macAddress": "f6:ff:37:aa:6c:f1",
+  "university": "Northeastern University",
+  "bank": {
+    "cardExpire": "12/27",
+    "cardNumber": "3634388457177035",
+    "cardType": "Diners Club International",
+    "currency": "PKR",
+    "iban": "DE54092147842698685963"
+  },
+  "company": {
+    "department": "Accounting",
+    "name": "Zulauf and Sons",
+    "title": "Chief Executive Officer",
+    "address": {
+      "address": "569 Jefferson Street",
+      "city": "Los Angeles",
+      "state": "Montana",
+      "stateCode": "MT",
+      "postalCode": "17779",
+      "coordinates": {
+        "lat": -18.371256,
+        "lng": 22.566258
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "364-782",
+  "ssn": "255-491-479",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "moderator"
+}

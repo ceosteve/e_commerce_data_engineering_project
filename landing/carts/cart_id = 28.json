@@ -1,0 +1,70 @@
+{
+  "id": 28,
+  "products": [
+    {
+      "id": 182,
+      "title": "Green Crystal Earring",
+      "price": 29.99,
+      "quantity": 5,
+      "total": 149.95,
+      "discountPercentage": 15.24,
+      "discountedTotal": 127.1,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/thumbnail.webp"
+    },
+    {
+      "id": 64,
+      "title": "Knife",
+      "price": 14.99,
+      "quantity": 2,
+      "total": 29.98,
+      "discountPercentage": 18.86,
+      "discountedTotal": 24.33,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/thumbnail.webp"
+    },
+    {
+      "id": 46,
+      "title": "Plant Pot",
+      "price": 14.99,
+      "quantity": 3,
+      "total": 44.97,
+      "discountPercentage": 6.84,
+      "discountedTotal": 41.89,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp"
+    },
+    {
+      "id": 185,
+      "title": "Black & Brown Slipper",
+      "price": 19.99,
+      "quantity": 5,
+      "total": 99.94999999999999,
+      "discountPercentage": 3.33,
+      "discountedTotal": 96.62,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/thumbnail.webp"
+    },
+    {
+      "id": 175,
+      "title": "White Faux Leather Backpack",
+      "price": 39.99,
+      "quantity": 3,
+      "total": 119.97,
+      "discountPercentage": 15.2,
+      "discountedTotal": 101.73,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/thumbnail.webp"
+    },
+    {
+      "id": 81,
+      "title": "Lenovo Yoga 920",
+      "price": 1099.99,
+      "quantity": 5,
+      "total": 5499.95,
+      "discountPercentage": 6.55,
+      "discountedTotal": 5139.7,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp"
+    }
+  ],
+  "total": 5944.77,
+  "discountedTotal": 5531.37,
+  "userId": 28,
+  "totalProducts": 6,
+  "totalQuantity": 23
+}

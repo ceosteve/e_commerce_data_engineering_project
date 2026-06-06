@@ -1,0 +1,40 @@
+{
+  "id": 21,
+  "products": [
+    {
+      "id": 79,
+      "title": "Asus Zenbook Pro Dual Screen Laptop",
+      "price": 1799.99,
+      "quantity": 1,
+      "total": 1799.99,
+      "discountPercentage": 11.14,
+      "discountedTotal": 1599.47,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp"
+    },
+    {
+      "id": 164,
+      "title": "Gray Dress",
+      "price": 34.99,
+      "quantity": 4,
+      "total": 139.96,
+      "discountPercentage": 14.28,
+      "discountedTotal": 119.97,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/gray-dress/thumbnail.webp"
+    },
+    {
+      "id": 192,
+      "title": "Rolex Datejust Women",
+      "price": 10999.99,
+      "quantity": 1,
+      "total": 10999.99,
+      "discountPercentage": 15.94,
+      "discountedTotal": 9246.59,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/thumbnail.webp"
+    }
+  ],
+  "total": 12939.94,
+  "discountedTotal": 10966.03,
+  "userId": 21,
+  "totalProducts": 3,
+  "totalQuantity": 6
+}

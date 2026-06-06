@@ -1,0 +1,30 @@
+{
+  "id": 10,
+  "products": [
+    {
+      "id": 41,
+      "title": "Tissue Paper Box",
+      "price": 2.49,
+      "quantity": 1,
+      "total": 2.49,
+      "discountPercentage": 13.28,
+      "discountedTotal": 2.16,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/thumbnail.webp"
+    },
+    {
+      "id": 108,
+      "title": "iPhone 12 Silicone Case with MagSafe Plum",
+      "price": 29.99,
+      "quantity": 5,
+      "total": 149.95,
+      "discountPercentage": 13.85,
+      "discountedTotal": 129.18,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp"
+    }
+  ],
+  "total": 152.44,
+  "discountedTotal": 131.34,
+  "userId": 10,
+  "totalProducts": 2,
+  "totalQuantity": 6
+}

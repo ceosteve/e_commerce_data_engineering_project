@@ -1,0 +1,70 @@
+{
+  "id": 28,
+  "firstName": "Lily",
+  "lastName": "Lee",
+  "maidenName": "Brown",
+  "age": 30,
+  "gender": "female",
+  "email": "lily.lee@x.dummyjson.com",
+  "phone": "+1 808-757-9867",
+  "username": "lilyb",
+  "password": "lilybpass",
+  "birthDate": "1995-12-3",
+  "image": "https://dummyjson.com/icon/lilyb/128",
+  "bloodGroup": "AB-",
+  "height": 181.42,
+  "weight": 51.49,
+  "eyeColor": "Gray",
+  "hair": {
+    "color": "Purple",
+    "type": "Straight"
+  },
+  "ip": "67.184.255.96",
+  "address": {
+    "address": "1946 Oak Street",
+    "city": "Phoenix",
+    "state": "Massachusetts",
+    "stateCode": "MA",
+    "postalCode": "41540",
+    "coordinates": {
+      "lat": -9.87059,
+      "lng": -72.336845
+    },
+    "country": "United States"
+  },
+  "macAddress": "18:b6:c7:a:50:3f",
+  "university": "Johns Hopkins University",
+  "bank": {
+    "cardExpire": "12/28",
+    "cardNumber": "5551782139834613",
+    "cardType": "Mastercard",
+    "currency": "CAD",
+    "iban": "DE49484285539189712621"
+  },
+  "company": {
+    "department": "Product Management",
+    "name": "Cremin Inc",
+    "title": "Quality Assurance Engineer",
+    "address": {
+      "address": "1735 Cedar Street",
+      "city": "Phoenix",
+      "state": "Wyoming",
+      "stateCode": "WY",
+      "postalCode": "85797",
+      "coordinates": {
+        "lat": 72.231441,
+        "lng": -158.147245
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "229-776",
+  "ssn": "358-185-671",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

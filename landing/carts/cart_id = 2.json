@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "products": [
+    {
+      "id": 86,
+      "title": "Man Short Sleeve Shirt",
+      "price": 19.99,
+      "quantity": 5,
+      "total": 99.94999999999999,
+      "discountPercentage": 6.83,
+      "discountedTotal": 93.12,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp"
+    },
+    {
+      "id": 104,
+      "title": "Apple iPhone Charger",
+      "price": 19.99,
+      "quantity": 2,
+      "total": 39.98,
+      "discountPercentage": 18.52,
+      "discountedTotal": 32.58,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp"
+    }
+  ],
+  "total": 139.93,
+  "discountedTotal": 125.7,
+  "userId": 2,
+  "totalProducts": 2,
+  "totalQuantity": 7
+}

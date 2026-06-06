@@ -1,0 +1,60 @@
+{
+  "id": 11,
+  "products": [
+    {
+      "id": 115,
+      "title": "MotoGP CI.H1",
+      "price": 14999.99,
+      "quantity": 4,
+      "total": 59999.96,
+      "discountPercentage": 6.92,
+      "discountedTotal": 55847.96,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/thumbnail.webp"
+    },
+    {
+      "id": 101,
+      "title": "Apple AirPods Max Silver",
+      "price": 549.99,
+      "quantity": 2,
+      "total": 1099.98,
+      "discountPercentage": 13.67,
+      "discountedTotal": 949.61,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp"
+    },
+    {
+      "id": 55,
+      "title": "Egg Slicer",
+      "price": 6.99,
+      "quantity": 4,
+      "total": 27.96,
+      "discountPercentage": 14.76,
+      "discountedTotal": 23.83,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp"
+    },
+    {
+      "id": 25,
+      "title": "Green Bell Pepper",
+      "price": 1.29,
+      "quantity": 3,
+      "total": 3.87,
+      "discountPercentage": 0.16,
+      "discountedTotal": 3.86,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp"
+    },
+    {
+      "id": 161,
+      "title": "Samsung Galaxy Tab White",
+      "price": 349.99,
+      "quantity": 2,
+      "total": 699.98,
+      "discountPercentage": 18.2,
+      "discountedTotal": 572.58,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp"
+    }
+  ],
+  "total": 61831.75,
+  "discountedTotal": 57397.84,
+  "userId": 11,
+  "totalProducts": 5,
+  "totalQuantity": 15
+}

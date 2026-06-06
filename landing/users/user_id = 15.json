@@ -1,0 +1,70 @@
+{
+  "id": 15,
+  "firstName": "William",
+  "lastName": "Gonzalez",
+  "maidenName": "",
+  "age": 33,
+  "gender": "male",
+  "email": "william.gonzalez@x.dummyjson.com",
+  "phone": "+81 905-252-7319",
+  "username": "williamg",
+  "password": "williamgpass",
+  "birthDate": "1992-3-27",
+  "image": "https://dummyjson.com/icon/williamg/128",
+  "bloodGroup": "B-",
+  "height": 173.21,
+  "weight": 82.41,
+  "eyeColor": "Hazel",
+  "hair": {
+    "color": "Gray",
+    "type": "Curly"
+  },
+  "ip": "250.2.241.204",
+  "address": {
+    "address": "31 Maple Street",
+    "city": "San Jose",
+    "state": "Utah",
+    "stateCode": "UT",
+    "postalCode": "78243",
+    "coordinates": {
+      "lat": 8.152876,
+      "lng": 113.29799
+    },
+    "country": "United States"
+  },
+  "macAddress": "f5:68:28:f9:ec:89",
+  "university": "Tufts University",
+  "bank": {
+    "cardExpire": "05/30",
+    "cardNumber": "6228256225004929",
+    "cardType": "UnionPay",
+    "currency": "PKR",
+    "iban": "DE63711022986572448914"
+  },
+  "company": {
+    "department": "Marketing",
+    "name": "Spinka - Dickinson",
+    "title": "Software Architect",
+    "address": {
+      "address": "1538 Eighth Street",
+      "city": "San Jose",
+      "state": "Missouri",
+      "stateCode": "MO",
+      "postalCode": "29673",
+      "coordinates": {
+        "lat": 24.169361,
+        "lng": -29.395167
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "830-515",
+  "ssn": "690-544-755",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "moderator"
+}

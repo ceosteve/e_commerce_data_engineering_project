@@ -1,0 +1,70 @@
+{
+  "id": 26,
+  "firstName": "Evelyn",
+  "lastName": "Gonzalez",
+  "maidenName": "",
+  "age": 36,
+  "gender": "female",
+  "email": "evelyn.gonzalez@x.dummyjson.com",
+  "phone": "+61 708-508-4638",
+  "username": "evelyng",
+  "password": "evelyngpass",
+  "birthDate": "1989-2-5",
+  "image": "https://dummyjson.com/icon/evelyng/128",
+  "bloodGroup": "O+",
+  "height": 168.94,
+  "weight": 58.47,
+  "eyeColor": "Red",
+  "hair": {
+    "color": "Black",
+    "type": "Wavy"
+  },
+  "ip": "42.52.74.232",
+  "address": {
+    "address": "1065 Lincoln Street",
+    "city": "Dallas",
+    "state": "Maine",
+    "stateCode": "ME",
+    "postalCode": "84898",
+    "coordinates": {
+      "lat": 67.768359,
+      "lng": 71.268643
+    },
+    "country": "United States"
+  },
+  "macAddress": "89:5e:5a:2a:72:42",
+  "university": "Washington University in St. Louis",
+  "bank": {
+    "cardExpire": "08/28",
+    "cardNumber": "6011735364912274",
+    "cardType": "Discover",
+    "currency": "CAD",
+    "iban": "DE27147353096476220032"
+  },
+  "company": {
+    "department": "Accounting",
+    "name": "Tromp, Gaylord and Weber",
+    "title": "Project Manager",
+    "address": {
+      "address": "584 Ninth Street",
+      "city": "Jacksonville",
+      "state": "Wisconsin",
+      "stateCode": "WI",
+      "postalCode": "45633",
+      "coordinates": {
+        "lat": 26.014021,
+        "lng": 40.572436
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "569-275",
+  "ssn": "487-680-127",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

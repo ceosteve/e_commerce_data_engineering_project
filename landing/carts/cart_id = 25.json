@@ -1,0 +1,60 @@
+{
+  "id": 25,
+  "products": [
+    {
+      "id": 32,
+      "title": "Milk",
+      "price": 3.49,
+      "quantity": 2,
+      "total": 6.98,
+      "discountPercentage": 13.74,
+      "discountedTotal": 6.02,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/milk/thumbnail.webp"
+    },
+    {
+      "id": 106,
+      "title": "Apple Watch Series 4 Gold",
+      "price": 349.99,
+      "quantity": 3,
+      "total": 1049.97,
+      "discountPercentage": 12.02,
+      "discountedTotal": 923.76,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp"
+    },
+    {
+      "id": 35,
+      "title": "Potatoes",
+      "price": 2.29,
+      "quantity": 5,
+      "total": 11.45,
+      "discountPercentage": 5.38,
+      "discountedTotal": 10.83,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp"
+    },
+    {
+      "id": 110,
+      "title": "Selfie Lamp with iPhone",
+      "price": 14.99,
+      "quantity": 4,
+      "total": 59.96,
+      "discountPercentage": 19.4,
+      "discountedTotal": 48.33,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp"
+    },
+    {
+      "id": 103,
+      "title": "Apple HomePod Mini Cosmic Grey",
+      "price": 99.99,
+      "quantity": 1,
+      "total": 99.99,
+      "discountPercentage": 18.1,
+      "discountedTotal": 81.89,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp"
+    }
+  ],
+  "total": 1228.35,
+  "discountedTotal": 1070.83,
+  "userId": 25,
+  "totalProducts": 5,
+  "totalQuantity": 15
+}

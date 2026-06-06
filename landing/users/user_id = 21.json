@@ -1,0 +1,70 @@
+{
+  "id": 21,
+  "firstName": "Madison",
+  "lastName": "Collins",
+  "maidenName": "",
+  "age": 27,
+  "gender": "female",
+  "email": "madison.collins@x.dummyjson.com",
+  "phone": "+81 259-957-5711",
+  "username": "madisonc",
+  "password": "madisoncpass",
+  "birthDate": "1998-3-7",
+  "image": "https://dummyjson.com/icon/madisonc/128",
+  "bloodGroup": "B-",
+  "height": 189.28,
+  "weight": 56.96,
+  "eyeColor": "Red",
+  "hair": {
+    "color": "Gray",
+    "type": "Curly"
+  },
+  "ip": "85.34.1.204",
+  "address": {
+    "address": "1892 Lincoln Street",
+    "city": "Philadelphia",
+    "state": "New Jersey",
+    "stateCode": "NJ",
+    "postalCode": "62091",
+    "coordinates": {
+      "lat": 52.993694,
+      "lng": 160.486892
+    },
+    "country": "United States"
+  },
+  "macAddress": "13:b0:d0:23:4d:26",
+  "university": "University of Pennsylvania",
+  "bank": {
+    "cardExpire": "09/27",
+    "cardNumber": "5551259848327064",
+    "cardType": "Mastercard",
+    "currency": "EUR",
+    "iban": "ES3893300143587765232049"
+  },
+  "company": {
+    "department": "Engineering",
+    "name": "Mayer - Smitham",
+    "title": "Chief Technology Officer",
+    "address": {
+      "address": "1438 Main Street",
+      "city": "San Diego",
+      "state": "Delaware",
+      "stateCode": "DE",
+      "postalCode": "63144",
+      "coordinates": {
+        "lat": 1.629613,
+        "lng": 23.232982
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "716-166",
+  "ssn": "457-258-950",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

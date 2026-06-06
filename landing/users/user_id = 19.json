@@ -1,0 +1,70 @@
+{
+  "id": 19,
+  "firstName": "Abigail",
+  "lastName": "Rivera",
+  "maidenName": "",
+  "age": 29,
+  "gender": "female",
+  "email": "abigail.rivera@x.dummyjson.com",
+  "phone": "+91 228-363-7806",
+  "username": "abigailr",
+  "password": "abigailrpass",
+  "birthDate": "1996-10-11",
+  "image": "https://dummyjson.com/icon/abigailr/128",
+  "bloodGroup": "B+",
+  "height": 186.39,
+  "weight": 74.61,
+  "eyeColor": "Violet",
+  "hair": {
+    "color": "Blue",
+    "type": "Kinky"
+  },
+  "ip": "19.183.240.94",
+  "address": {
+    "address": "996 Oak Street",
+    "city": "Chicago",
+    "state": "New Mexico",
+    "stateCode": "NM",
+    "postalCode": "11407",
+    "coordinates": {
+      "lat": 44.321308,
+      "lng": -3.723903
+    },
+    "country": "United States"
+  },
+  "macAddress": "1d:a6:58:2a:e5:e4",
+  "university": "California Institute of Technology (Caltech)",
+  "bank": {
+    "cardExpire": "01/27",
+    "cardNumber": "6011399019022417",
+    "cardType": "Discover",
+    "currency": "EUR",
+    "iban": "IT11QP2B5J81QM1FBX029VI5DD68O"
+  },
+  "company": {
+    "department": "Human Resources",
+    "name": "Prohaska - Thiel",
+    "title": "Business Analyst",
+    "address": {
+      "address": "1402 Adams Street",
+      "city": "Austin",
+      "state": "Wisconsin",
+      "stateCode": "WI",
+      "postalCode": "51456",
+      "coordinates": {
+        "lat": 25.672938,
+        "lng": -76.54967
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "173-637",
+  "ssn": "655-823-929",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/97.0.1072.76 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

@@ -1,0 +1,70 @@
+{
+  "id": 12,
+  "products": [
+    {
+      "id": 117,
+      "title": "Sportbike Motorcycle",
+      "price": 7499.99,
+      "quantity": 1,
+      "total": 7499.99,
+      "discountPercentage": 11.58,
+      "discountedTotal": 6631.49,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/thumbnail.webp"
+    },
+    {
+      "id": 28,
+      "title": "Ice Cream",
+      "price": 5.49,
+      "quantity": 5,
+      "total": 27.450000000000003,
+      "discountPercentage": 8.69,
+      "discountedTotal": 25.06,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp"
+    },
+    {
+      "id": 98,
+      "title": "Rolex Submariner Watch",
+      "price": 13999.99,
+      "quantity": 2,
+      "total": 27999.98,
+      "discountPercentage": 5.05,
+      "discountedTotal": 26585.98,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp"
+    },
+    {
+      "id": 8,
+      "title": "Dior J'adore",
+      "price": 89.99,
+      "quantity": 1,
+      "total": 89.99,
+      "discountPercentage": 14.72,
+      "discountedTotal": 76.74,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
+    },
+    {
+      "id": 162,
+      "title": "Blue Frock",
+      "price": 29.99,
+      "quantity": 5,
+      "total": 149.95,
+      "discountPercentage": 12.13,
+      "discountedTotal": 131.76,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp"
+    },
+    {
+      "id": 14,
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "price": 499.99,
+      "quantity": 4,
+      "total": 1999.96,
+      "discountPercentage": 2.01,
+      "discountedTotal": 1959.76,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp"
+    }
+  ],
+  "total": 37767.32,
+  "discountedTotal": 35410.79,
+  "userId": 12,
+  "totalProducts": 6,
+  "totalQuantity": 18
+}

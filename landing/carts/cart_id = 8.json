@@ -1,0 +1,70 @@
+{
+  "id": 8,
+  "products": [
+    {
+      "id": 18,
+      "title": "Cat Food",
+      "price": 8.99,
+      "quantity": 2,
+      "total": 17.98,
+      "discountPercentage": 9.58,
+      "discountedTotal": 16.26,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cat-food/thumbnail.webp"
+    },
+    {
+      "id": 50,
+      "title": "Black Whisk",
+      "price": 9.99,
+      "quantity": 3,
+      "total": 29.97,
+      "discountPercentage": 10.24,
+      "discountedTotal": 26.9,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp"
+    },
+    {
+      "id": 162,
+      "title": "Blue Frock",
+      "price": 29.99,
+      "quantity": 4,
+      "total": 119.96,
+      "discountPercentage": 12.13,
+      "discountedTotal": 105.41,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp"
+    },
+    {
+      "id": 11,
+      "title": "Annibale Colombo Bed",
+      "price": 1899.99,
+      "quantity": 3,
+      "total": 5699.97,
+      "discountPercentage": 8.57,
+      "discountedTotal": 5211.48,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
+    },
+    {
+      "id": 108,
+      "title": "iPhone 12 Silicone Case with MagSafe Plum",
+      "price": 29.99,
+      "quantity": 4,
+      "total": 119.96,
+      "discountPercentage": 13.85,
+      "discountedTotal": 103.35,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp"
+    },
+    {
+      "id": 106,
+      "title": "Apple Watch Series 4 Gold",
+      "price": 349.99,
+      "quantity": 1,
+      "total": 349.99,
+      "discountPercentage": 12.02,
+      "discountedTotal": 307.92,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp"
+    }
+  ],
+  "total": 6337.83,
+  "discountedTotal": 5771.32,
+  "userId": 8,
+  "totalProducts": 6,
+  "totalQuantity": 17
+}

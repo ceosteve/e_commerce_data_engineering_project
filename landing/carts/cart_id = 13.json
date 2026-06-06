@@ -1,0 +1,30 @@
+{
+  "id": 13,
+  "products": [
+    {
+      "id": 35,
+      "title": "Potatoes",
+      "price": 2.29,
+      "quantity": 2,
+      "total": 4.58,
+      "discountPercentage": 5.38,
+      "discountedTotal": 4.33,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp"
+    },
+    {
+      "id": 23,
+      "title": "Eggs",
+      "price": 2.99,
+      "quantity": 4,
+      "total": 11.96,
+      "discountPercentage": 11.05,
+      "discountedTotal": 10.64,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp"
+    }
+  ],
+  "total": 16.54,
+  "discountedTotal": 14.97,
+  "userId": 13,
+  "totalProducts": 2,
+  "totalQuantity": 6
+}

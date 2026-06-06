@@ -1,0 +1,70 @@
+{
+  "id": 29,
+  "firstName": "Henry",
+  "lastName": "Hill",
+  "maidenName": "",
+  "age": 39,
+  "gender": "male",
+  "email": "henry.hill@x.dummyjson.com",
+  "phone": "+1 240-833-4680",
+  "username": "henryh",
+  "password": "henryhpass",
+  "birthDate": "1986-8-19",
+  "image": "https://dummyjson.com/icon/henryh/128",
+  "bloodGroup": "O-",
+  "height": 180.25,
+  "weight": 95.84,
+  "eyeColor": "Gray",
+  "hair": {
+    "color": "Black",
+    "type": "Straight"
+  },
+  "ip": "194.43.55.202",
+  "address": {
+    "address": "1837 Maple Street",
+    "city": "Indianapolis",
+    "state": "Delaware",
+    "stateCode": "DE",
+    "postalCode": "81783",
+    "coordinates": {
+      "lat": 35.498256,
+      "lng": 154.088476
+    },
+    "country": "United States"
+  },
+  "macAddress": "fa:c3:1b:21:5f:44",
+  "university": "University of Illinois--Urbana-Champaign",
+  "bank": {
+    "cardExpire": "11/29",
+    "cardNumber": "3625097026040498",
+    "cardType": "Diners Club International",
+    "currency": "EUR",
+    "iban": "DE08820336197191865470"
+  },
+  "company": {
+    "department": "Services",
+    "name": "Gerlach, Funk and Schoen",
+    "title": "Sales Manager",
+    "address": {
+      "address": "1651 Lincoln Street",
+      "city": "San Francisco",
+      "state": "West Virginia",
+      "stateCode": "WV",
+      "postalCode": "61805",
+      "coordinates": {
+        "lat": -59.936335,
+        "lng": -12.405368
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "118-957",
+  "ssn": "925-686-100",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

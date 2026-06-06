@@ -1,0 +1,70 @@
+{
+  "id": 22,
+  "firstName": "Elijah",
+  "lastName": "Stewart",
+  "maidenName": "",
+  "age": 34,
+  "gender": "male",
+  "email": "elijah.stewart@x.dummyjson.com",
+  "phone": "+44 468-357-7872",
+  "username": "elijahs",
+  "password": "elijahspass",
+  "birthDate": "1991-10-22",
+  "image": "https://dummyjson.com/icon/elijahs/128",
+  "bloodGroup": "A-",
+  "height": 195.33,
+  "weight": 81.64,
+  "eyeColor": "Blue",
+  "hair": {
+    "color": "Purple",
+    "type": "Straight"
+  },
+  "ip": "23.87.135.62",
+  "address": {
+    "address": "1701 Eighth Street",
+    "city": "Columbus",
+    "state": "Illinois",
+    "stateCode": "IL",
+    "postalCode": "31585",
+    "coordinates": {
+      "lat": -54.833799,
+      "lng": -174.504027
+    },
+    "country": "United States"
+  },
+  "macAddress": "75:17:c6:35:fc:6d",
+  "university": "Georgetown University",
+  "bank": {
+    "cardExpire": "05/28",
+    "cardNumber": "3648138556543460",
+    "cardType": "Diners Club International",
+    "currency": "EUR",
+    "iban": "DE82018985741195770313"
+  },
+  "company": {
+    "department": "Legal",
+    "name": "Langworth Group",
+    "title": "Business Analyst",
+    "address": {
+      "address": "155 Ninth Street",
+      "city": "Washington",
+      "state": "South Dakota",
+      "stateCode": "SD",
+      "postalCode": "19039",
+      "coordinates": {
+        "lat": 61.279254,
+        "lng": -12.607767
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "520-394",
+  "ssn": "287-380-801",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

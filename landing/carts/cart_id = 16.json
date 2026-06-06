@@ -1,0 +1,30 @@
+{
+  "id": 16,
+  "products": [
+    {
+      "id": 20,
+      "title": "Cooking Oil",
+      "price": 4.99,
+      "quantity": 5,
+      "total": 24.950000000000003,
+      "discountPercentage": 9.33,
+      "discountedTotal": 22.62,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp"
+    },
+    {
+      "id": 91,
+      "title": "Sports Sneakers Off White & Red",
+      "price": 119.99,
+      "quantity": 3,
+      "total": 359.96999999999997,
+      "discountPercentage": 4.97,
+      "discountedTotal": 342.08,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp"
+    }
+  ],
+  "total": 384.92,
+  "discountedTotal": 364.7,
+  "userId": 16,
+  "totalProducts": 2,
+  "totalQuantity": 8
+}

@@ -1,0 +1,50 @@
+{
+  "id": 17,
+  "products": [
+    {
+      "id": 123,
+      "title": "iPhone 13 Pro",
+      "price": 1099.99,
+      "quantity": 5,
+      "total": 5499.95,
+      "discountPercentage": 9.37,
+      "discountedTotal": 4984.6,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp"
+    },
+    {
+      "id": 137,
+      "title": "American Football",
+      "price": 19.99,
+      "quantity": 1,
+      "total": 19.99,
+      "discountPercentage": 4.93,
+      "discountedTotal": 19,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/american-football/thumbnail.webp"
+    },
+    {
+      "id": 25,
+      "title": "Green Bell Pepper",
+      "price": 1.29,
+      "quantity": 5,
+      "total": 6.45,
+      "discountPercentage": 0.16,
+      "discountedTotal": 6.44,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp"
+    },
+    {
+      "id": 26,
+      "title": "Green Chili Pepper",
+      "price": 0.99,
+      "quantity": 5,
+      "total": 4.95,
+      "discountPercentage": 1,
+      "discountedTotal": 4.9,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp"
+    }
+  ],
+  "total": 5531.34,
+  "discountedTotal": 5014.94,
+  "userId": 17,
+  "totalProducts": 4,
+  "totalQuantity": 16
+}

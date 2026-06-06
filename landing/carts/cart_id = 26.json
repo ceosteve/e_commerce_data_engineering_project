@@ -1,0 +1,50 @@
+{
+  "id": 26,
+  "products": [
+    {
+      "id": 122,
+      "title": "iPhone 6",
+      "price": 299.99,
+      "quantity": 3,
+      "total": 899.97,
+      "discountPercentage": 6.69,
+      "discountedTotal": 839.76,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp"
+    },
+    {
+      "id": 63,
+      "title": "Kitchen Sieve",
+      "price": 7.99,
+      "quantity": 4,
+      "total": 31.96,
+      "discountPercentage": 18.91,
+      "discountedTotal": 25.92,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/thumbnail.webp"
+    },
+    {
+      "id": 108,
+      "title": "iPhone 12 Silicone Case with MagSafe Plum",
+      "price": 29.99,
+      "quantity": 4,
+      "total": 119.96,
+      "discountPercentage": 13.85,
+      "discountedTotal": 103.35,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp"
+    },
+    {
+      "id": 153,
+      "title": "Volleyball",
+      "price": 11.99,
+      "quantity": 5,
+      "total": 59.95,
+      "discountPercentage": 12.25,
+      "discountedTotal": 52.61,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/thumbnail.webp"
+    }
+  ],
+  "total": 1111.84,
+  "discountedTotal": 1021.64,
+  "userId": 26,
+  "totalProducts": 4,
+  "totalQuantity": 16
+}

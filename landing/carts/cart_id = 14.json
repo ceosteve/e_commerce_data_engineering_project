@@ -1,0 +1,40 @@
+{
+  "id": 14,
+  "products": [
+    {
+      "id": 44,
+      "title": "Family Tree Photo Frame",
+      "price": 29.99,
+      "quantity": 4,
+      "total": 119.96,
+      "discountPercentage": 14.87,
+      "discountedTotal": 102.12,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/thumbnail.webp"
+    },
+    {
+      "id": 68,
+      "title": "Pan",
+      "price": 24.99,
+      "quantity": 1,
+      "total": 24.99,
+      "discountPercentage": 3,
+      "discountedTotal": 24.24,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/thumbnail.webp"
+    },
+    {
+      "id": 65,
+      "title": "Lunch Box",
+      "price": 12.99,
+      "quantity": 5,
+      "total": 64.95,
+      "discountPercentage": 10.34,
+      "discountedTotal": 58.23,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/thumbnail.webp"
+    }
+  ],
+  "total": 209.9,
+  "discountedTotal": 184.59,
+  "userId": 14,
+  "totalProducts": 3,
+  "totalQuantity": 10
+}

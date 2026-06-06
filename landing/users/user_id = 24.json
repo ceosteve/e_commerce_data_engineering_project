@@ -1,0 +1,70 @@
+{
+  "id": 24,
+  "firstName": "Mateo",
+  "lastName": "Nguyen",
+  "maidenName": "",
+  "age": 31,
+  "gender": "male",
+  "email": "mateo.nguyen@x.dummyjson.com",
+  "phone": "+1 341-597-6694",
+  "username": "mateon",
+  "password": "mateonpass",
+  "birthDate": "1994-6-2",
+  "image": "https://dummyjson.com/icon/mateon/128",
+  "bloodGroup": "O+",
+  "height": 174.29,
+  "weight": 59.98,
+  "eyeColor": "Red",
+  "hair": {
+    "color": "Purple",
+    "type": "Wavy"
+  },
+  "ip": "192.57.144.7",
+  "address": {
+    "address": "1578 Fourth Street",
+    "city": "Columbus",
+    "state": "Missouri",
+    "stateCode": "MO",
+    "postalCode": "20673",
+    "coordinates": {
+      "lat": -32.828675,
+      "lng": -82.557354
+    },
+    "country": "United States"
+  },
+  "macAddress": "a7:26:10:7a:36:29",
+  "university": "Columbia University",
+  "bank": {
+    "cardExpire": "12/29",
+    "cardNumber": "4021840414995098",
+    "cardType": "Visa",
+    "currency": "CAD",
+    "iban": "DE43275561962007561223"
+  },
+  "company": {
+    "department": "Accounting",
+    "name": "Spinka LLC",
+    "title": "Business Analyst",
+    "address": {
+      "address": "1967 Jefferson Street",
+      "city": "Dallas",
+      "state": "Louisiana",
+      "stateCode": "LA",
+      "postalCode": "78527",
+      "coordinates": {
+        "lat": 75.982676,
+        "lng": 164.459743
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "229-249",
+  "ssn": "416-877-230",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

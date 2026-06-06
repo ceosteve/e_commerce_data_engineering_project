@@ -1,0 +1,50 @@
+{
+  "id": 29,
+  "products": [
+    {
+      "id": 174,
+      "title": "Prada Women Bag",
+      "price": 599.99,
+      "quantity": 3,
+      "total": 1799.97,
+      "discountPercentage": 14.09,
+      "discountedTotal": 1546.35,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/thumbnail.webp"
+    },
+    {
+      "id": 102,
+      "title": "Apple Airpower Wireless Charger",
+      "price": 79.99,
+      "quantity": 5,
+      "total": 399.95,
+      "discountPercentage": 4.48,
+      "discountedTotal": 382.03,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp"
+    },
+    {
+      "id": 48,
+      "title": "Bamboo Spatula",
+      "price": 7.99,
+      "quantity": 5,
+      "total": 39.95,
+      "discountPercentage": 2.84,
+      "discountedTotal": 38.82,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp"
+    },
+    {
+      "id": 141,
+      "title": "Basketball Rim",
+      "price": 39.99,
+      "quantity": 3,
+      "total": 119.97,
+      "discountPercentage": 7.74,
+      "discountedTotal": 110.68,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/thumbnail.webp"
+    }
+  ],
+  "total": 2359.84,
+  "discountedTotal": 2077.88,
+  "userId": 29,
+  "totalProducts": 4,
+  "totalQuantity": 16
+}

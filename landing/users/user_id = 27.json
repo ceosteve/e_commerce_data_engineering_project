@@ -1,0 +1,70 @@
+{
+  "id": 27,
+  "firstName": "Daniel",
+  "lastName": "Cook",
+  "maidenName": "",
+  "age": 42,
+  "gender": "male",
+  "email": "daniel.cook@x.dummyjson.com",
+  "phone": "+44 254-761-6843",
+  "username": "danielc",
+  "password": "danielcpass",
+  "birthDate": "1983-12-25",
+  "image": "https://dummyjson.com/icon/danielc/128",
+  "bloodGroup": "AB+",
+  "height": 186.21,
+  "weight": 83.72,
+  "eyeColor": "Brown",
+  "hair": {
+    "color": "Blonde",
+    "type": "Curly"
+  },
+  "ip": "1.61.73.142",
+  "address": {
+    "address": "1163 Pine Street",
+    "city": "Los Angeles",
+    "state": "Nevada",
+    "stateCode": "NV",
+    "postalCode": "58781",
+    "coordinates": {
+      "lat": -3.456681,
+      "lng": -134.937482
+    },
+    "country": "United States"
+  },
+  "macAddress": "6e:73:dc:3a:85:10",
+  "university": "Columbia University",
+  "bank": {
+    "cardExpire": "05/29",
+    "cardNumber": "5485409595328150",
+    "cardType": "Mastercard",
+    "currency": "NZD",
+    "iban": "DE71341603969952506034"
+  },
+  "company": {
+    "department": "Support",
+    "name": "Morissette, Baumbach and Auer",
+    "title": "Legal Counsel",
+    "address": {
+      "address": "938 Fifth Street",
+      "city": "San Francisco",
+      "state": "South Dakota",
+      "stateCode": "SD",
+      "postalCode": "45305",
+      "coordinates": {
+        "lat": 21.323588,
+        "lng": -83.531427
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "585-905",
+  "ssn": "645-515-583",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

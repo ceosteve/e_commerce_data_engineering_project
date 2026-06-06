@@ -1,0 +1,50 @@
+{
+  "id": 9,
+  "products": [
+    {
+      "id": 1,
+      "title": "Essence Mascara Lash Princess",
+      "price": 9.99,
+      "quantity": 3,
+      "total": 29.97,
+      "discountPercentage": 10.48,
+      "discountedTotal": 26.83,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+    },
+    {
+      "id": 98,
+      "title": "Rolex Submariner Watch",
+      "price": 13999.99,
+      "quantity": 2,
+      "total": 27999.98,
+      "discountPercentage": 5.05,
+      "discountedTotal": 26585.98,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp"
+    },
+    {
+      "id": 132,
+      "title": "Samsung Galaxy S8",
+      "price": 499.99,
+      "quantity": 3,
+      "total": 1499.97,
+      "discountPercentage": 19.45,
+      "discountedTotal": 1208.23,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp"
+    },
+    {
+      "id": 90,
+      "title": "Puma Future Rider Trainers",
+      "price": 89.99,
+      "quantity": 2,
+      "total": 179.98,
+      "discountPercentage": 4.2,
+      "discountedTotal": 172.42,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp"
+    }
+  ],
+  "total": 29709.9,
+  "discountedTotal": 27993.46,
+  "userId": 9,
+  "totalProducts": 4,
+  "totalQuantity": 10
+}

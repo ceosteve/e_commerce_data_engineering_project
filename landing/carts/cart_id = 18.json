@@ -1,0 +1,30 @@
+{
+  "id": 18,
+  "products": [
+    {
+      "id": 169,
+      "title": "Dodge Hornet GT Plus",
+      "price": 24999.99,
+      "quantity": 5,
+      "total": 124999.95000000001,
+      "discountPercentage": 2.63,
+      "discountedTotal": 121712.45,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/thumbnail.webp"
+    },
+    {
+      "id": 193,
+      "title": "Watch Gold for Women",
+      "price": 799.99,
+      "quantity": 5,
+      "total": 3999.95,
+      "discountPercentage": 18.34,
+      "discountedTotal": 3266.36,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/thumbnail.webp"
+    }
+  ],
+  "total": 128999.9,
+  "discountedTotal": 124978.81,
+  "userId": 18,
+  "totalProducts": 2,
+  "totalQuantity": 10
+}

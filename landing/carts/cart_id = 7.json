@@ -1,0 +1,70 @@
+{
+  "id": 7,
+  "products": [
+    {
+      "id": 56,
+      "title": "Electric Stove",
+      "price": 49.99,
+      "quantity": 1,
+      "total": 49.99,
+      "discountPercentage": 14.04,
+      "discountedTotal": 42.97,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp"
+    },
+    {
+      "id": 136,
+      "title": "Vivo X21",
+      "price": 499.99,
+      "quantity": 1,
+      "total": 499.99,
+      "discountPercentage": 17.41,
+      "discountedTotal": 412.94,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp"
+    },
+    {
+      "id": 9,
+      "title": "Dolce Shine Eau de",
+      "price": 69.99,
+      "quantity": 2,
+      "total": 139.98,
+      "discountPercentage": 0.62,
+      "discountedTotal": 139.11,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp"
+    },
+    {
+      "id": 120,
+      "title": "Vaseline Men Body and Face Lotion",
+      "price": 9.99,
+      "quantity": 4,
+      "total": 39.96,
+      "discountPercentage": 13.39,
+      "discountedTotal": 34.61,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/thumbnail.webp"
+    },
+    {
+      "id": 56,
+      "title": "Electric Stove",
+      "price": 49.99,
+      "quantity": 1,
+      "total": 49.99,
+      "discountPercentage": 14.04,
+      "discountedTotal": 42.97,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp"
+    },
+    {
+      "id": 90,
+      "title": "Puma Future Rider Trainers",
+      "price": 89.99,
+      "quantity": 5,
+      "total": 449.95,
+      "discountPercentage": 4.2,
+      "discountedTotal": 431.05,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp"
+    }
+  ],
+  "total": 1229.86,
+  "discountedTotal": 1103.65,
+  "userId": 7,
+  "totalProducts": 6,
+  "totalQuantity": 14
+}

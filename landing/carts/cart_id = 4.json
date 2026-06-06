@@ -1,0 +1,30 @@
+{
+  "id": 4,
+  "products": [
+    {
+      "id": 92,
+      "title": "Sports Sneakers Off White Red",
+      "price": 109.99,
+      "quantity": 3,
+      "total": 329.96999999999997,
+      "discountPercentage": 0.04,
+      "discountedTotal": 329.84,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp"
+    },
+    {
+      "id": 8,
+      "title": "Dior J'adore",
+      "price": 89.99,
+      "quantity": 4,
+      "total": 359.96,
+      "discountPercentage": 14.72,
+      "discountedTotal": 306.97,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
+    }
+  ],
+  "total": 689.93,
+  "discountedTotal": 636.81,
+  "userId": 4,
+  "totalProducts": 2,
+  "totalQuantity": 7
+}

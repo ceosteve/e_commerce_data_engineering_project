@@ -1,0 +1,70 @@
+{
+  "id": 30,
+  "products": [
+    {
+      "id": 143,
+      "title": "Cricket Bat",
+      "price": 29.99,
+      "quantity": 1,
+      "total": 29.99,
+      "discountPercentage": 3.29,
+      "discountedTotal": 29,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/thumbnail.webp"
+    },
+    {
+      "id": 135,
+      "title": "Vivo V9",
+      "price": 299.99,
+      "quantity": 2,
+      "total": 599.98,
+      "discountPercentage": 17.67,
+      "discountedTotal": 493.96,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp"
+    },
+    {
+      "id": 126,
+      "title": "Oppo F19 Pro Plus",
+      "price": 399.99,
+      "quantity": 1,
+      "total": 399.99,
+      "discountPercentage": 18.64,
+      "discountedTotal": 325.43,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp"
+    },
+    {
+      "id": 77,
+      "title": "Yellow Peeler",
+      "price": 5.99,
+      "quantity": 1,
+      "total": 5.99,
+      "discountPercentage": 12.48,
+      "discountedTotal": 5.24,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/thumbnail.webp"
+    },
+    {
+      "id": 3,
+      "title": "Powder Canister",
+      "price": 14.99,
+      "quantity": 5,
+      "total": 74.95,
+      "discountPercentage": 9.84,
+      "discountedTotal": 67.57,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp"
+    },
+    {
+      "id": 170,
+      "title": "Durango SXT RWD",
+      "price": 36999.99,
+      "quantity": 5,
+      "total": 184999.94999999998,
+      "discountPercentage": 16.44,
+      "discountedTotal": 154585.96,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/thumbnail.webp"
+    }
+  ],
+  "total": 186110.85,
+  "discountedTotal": 155507.16,
+  "userId": 30,
+  "totalProducts": 6,
+  "totalQuantity": 15
+}

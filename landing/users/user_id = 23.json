@@ -1,0 +1,70 @@
+{
+  "id": 23,
+  "firstName": "Chloe",
+  "lastName": "Morales",
+  "maidenName": "",
+  "age": 40,
+  "gender": "female",
+  "email": "chloe.morales@x.dummyjson.com",
+  "phone": "+92 468-541-7133",
+  "username": "chloem",
+  "password": "chloempass",
+  "birthDate": "1985-4-21",
+  "image": "https://dummyjson.com/icon/chloem/128",
+  "bloodGroup": "O+",
+  "height": 185.07,
+  "weight": 63.97,
+  "eyeColor": "Brown",
+  "hair": {
+    "color": "Red",
+    "type": "Kinky"
+  },
+  "ip": "66.78.20.21",
+  "address": {
+    "address": "401 Fourth Street",
+    "city": "Dallas",
+    "state": "New Jersey",
+    "stateCode": "NJ",
+    "postalCode": "54972",
+    "coordinates": {
+      "lat": -30.190759,
+      "lng": -58.705979
+    },
+    "country": "United States"
+  },
+  "macAddress": "fc:f:29:e1:37:b8",
+  "university": "Syracuse University",
+  "bank": {
+    "cardExpire": "09/30",
+    "cardNumber": "347036238254235",
+    "cardType": "American Express",
+    "currency": "CNY",
+    "iban": "DE77762461851744284392"
+  },
+  "company": {
+    "department": "Sales",
+    "name": "Grady LLC",
+    "title": "Database Administrator",
+    "address": {
+      "address": "269 Third Street",
+      "city": "Houston",
+      "state": "North Carolina",
+      "stateCode": "NC",
+      "postalCode": "10385",
+      "coordinates": {
+        "lat": 40.098115,
+        "lng": -1.762972
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "913-597",
+  "ssn": "938-883-163",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

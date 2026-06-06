@@ -1,0 +1,70 @@
+{
+  "id": 3,
+  "products": [
+    {
+      "id": 24,
+      "title": "Fish Steak",
+      "price": 14.99,
+      "quantity": 1,
+      "total": 14.99,
+      "discountPercentage": 4.23,
+      "discountedTotal": 14.36,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp"
+    },
+    {
+      "id": 123,
+      "title": "iPhone 13 Pro",
+      "price": 1099.99,
+      "quantity": 1,
+      "total": 1099.99,
+      "discountPercentage": 9.37,
+      "discountedTotal": 996.92,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp"
+    },
+    {
+      "id": 129,
+      "title": "Realme X",
+      "price": 299.99,
+      "quantity": 1,
+      "total": 299.99,
+      "discountPercentage": 6.95,
+      "discountedTotal": 279.14,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp"
+    },
+    {
+      "id": 86,
+      "title": "Man Short Sleeve Shirt",
+      "price": 19.99,
+      "quantity": 5,
+      "total": 99.94999999999999,
+      "discountPercentage": 6.83,
+      "discountedTotal": 93.12,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp"
+    },
+    {
+      "id": 8,
+      "title": "Dior J'adore",
+      "price": 89.99,
+      "quantity": 2,
+      "total": 179.98,
+      "discountPercentage": 14.72,
+      "discountedTotal": 153.49,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
+    },
+    {
+      "id": 157,
+      "title": "Party Glasses",
+      "price": 19.99,
+      "quantity": 5,
+      "total": 99.94999999999999,
+      "discountPercentage": 11.22,
+      "discountedTotal": 88.74,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/thumbnail.webp"
+    }
+  ],
+  "total": 1794.85,
+  "discountedTotal": 1625.77,
+  "userId": 3,
+  "totalProducts": 6,
+  "totalQuantity": 15
+}

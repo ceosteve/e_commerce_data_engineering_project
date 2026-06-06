@@ -1,0 +1,70 @@
+{
+  "id": 17,
+  "firstName": "Evelyn",
+  "lastName": "Sanchez",
+  "maidenName": "",
+  "age": 38,
+  "gender": "female",
+  "email": "evelyn.sanchez@x.dummyjson.com",
+  "phone": "+1 623-880-6871",
+  "username": "evelyns",
+  "password": "evelynspass",
+  "birthDate": "1987-10-13",
+  "image": "https://dummyjson.com/icon/evelyns/128",
+  "bloodGroup": "B+",
+  "height": 184.08,
+  "weight": 83.15,
+  "eyeColor": "Violet",
+  "hair": {
+    "color": "Blue",
+    "type": "Curly"
+  },
+  "ip": "87.114.135.146",
+  "address": {
+    "address": "1170 Lincoln Street",
+    "city": "San Diego",
+    "state": "Wyoming",
+    "stateCode": "WY",
+    "postalCode": "43423",
+    "coordinates": {
+      "lat": -83.31484,
+      "lng": 11.768071
+    },
+    "country": "United States"
+  },
+  "macAddress": "f8:e5:bd:43:bc:d8",
+  "university": "Washington University in St. Louis",
+  "bank": {
+    "cardExpire": "01/29",
+    "cardNumber": "3514443781649095",
+    "cardType": "JCB",
+    "currency": "GBP",
+    "iban": "GB74239MLVNQ0UB9ANTFRM"
+  },
+  "company": {
+    "department": "Support",
+    "name": "Predovic - Johns",
+    "title": "Chief Financial Officer",
+    "address": {
+      "address": "1802 Ninth Street",
+      "city": "San Diego",
+      "state": "Minnesota",
+      "stateCode": "MN",
+      "postalCode": "89416",
+      "coordinates": {
+        "lat": 29.034592,
+        "lng": -78.004598
+      },
+      "country": "United States"
+    }
+  },
+  "ein": "604-817",
+  "ssn": "689-332-644",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+  "crypto": {
+    "coin": "Bitcoin",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
+    "network": "Ethereum (ERC20)"
+  },
+  "role": "user"
+}

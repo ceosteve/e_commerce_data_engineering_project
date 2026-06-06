@@ -1,0 +1,40 @@
+{
+  "id": 15,
+  "products": [
+    {
+      "id": 61,
+      "title": "Hand Blender",
+      "price": 34.99,
+      "quantity": 2,
+      "total": 69.98,
+      "discountPercentage": 17.02,
+      "discountedTotal": 58.07,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/thumbnail.webp"
+    },
+    {
+      "id": 105,
+      "title": "Apple MagSafe Battery Pack",
+      "price": 99.99,
+      "quantity": 1,
+      "total": 99.99,
+      "discountPercentage": 17.17,
+      "discountedTotal": 82.82,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp"
+    },
+    {
+      "id": 141,
+      "title": "Basketball Rim",
+      "price": 39.99,
+      "quantity": 2,
+      "total": 79.98,
+      "discountPercentage": 7.74,
+      "discountedTotal": 73.79,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/thumbnail.webp"
+    }
+  ],
+  "total": 249.95,
+  "discountedTotal": 214.68,
+  "userId": 15,
+  "totalProducts": 3,
+  "totalQuantity": 5
+}

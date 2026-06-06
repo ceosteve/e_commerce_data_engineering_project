@@ -1,0 +1,50 @@
+{
+  "id": 27,
+  "products": [
+    {
+      "id": 192,
+      "title": "Rolex Datejust Women",
+      "price": 10999.99,
+      "quantity": 4,
+      "total": 43999.96,
+      "discountPercentage": 15.94,
+      "discountedTotal": 36986.37,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/thumbnail.webp"
+    },
+    {
+      "id": 97,
+      "title": "Rolex Datejust",
+      "price": 10999.99,
+      "quantity": 5,
+      "total": 54999.95,
+      "discountPercentage": 3.73,
+      "discountedTotal": 52948.45,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/thumbnail.webp"
+    },
+    {
+      "id": 20,
+      "title": "Cooking Oil",
+      "price": 4.99,
+      "quantity": 3,
+      "total": 14.97,
+      "discountPercentage": 9.33,
+      "discountedTotal": 13.57,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp"
+    },
+    {
+      "id": 113,
+      "title": "Generic Motorcycle",
+      "price": 3999.99,
+      "quantity": 3,
+      "total": 11999.97,
+      "discountPercentage": 12.1,
+      "discountedTotal": 10547.97,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/thumbnail.webp"
+    }
+  ],
+  "total": 111014.85,
+  "discountedTotal": 100496.36,
+  "userId": 27,
+  "totalProducts": 4,
+  "totalQuantity": 15
+}

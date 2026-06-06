@@ -1,0 +1,40 @@
+{
+  "id": 22,
+  "products": [
+    {
+      "id": 16,
+      "title": "Apple",
+      "price": 1.99,
+      "quantity": 4,
+      "total": 7.96,
+      "discountPercentage": 12.62,
+      "discountedTotal": 6.96,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
+    },
+    {
+      "id": 92,
+      "title": "Sports Sneakers Off White Red",
+      "price": 109.99,
+      "quantity": 2,
+      "total": 219.98,
+      "discountPercentage": 0.04,
+      "discountedTotal": 219.89,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp"
+    },
+    {
+      "id": 166,
+      "title": "Tartan Dress",
+      "price": 39.99,
+      "quantity": 2,
+      "total": 79.98,
+      "discountPercentage": 12.95,
+      "discountedTotal": 69.62,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/tartan-dress/thumbnail.webp"
+    }
+  ],
+  "total": 307.92,
+  "discountedTotal": 296.47,
+  "userId": 22,
+  "totalProducts": 3,
+  "totalQuantity": 8
+}
