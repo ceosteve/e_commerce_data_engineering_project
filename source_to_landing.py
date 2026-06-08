@@ -1,11 +1,9 @@
-import boto3
 import requests as r 
 import json
 from datetime import datetime
-import os
-from .utils import s3_client
+from utils import s3_client
 
-load_dotenv()
+
 
 base_url = 'https://dummyjson.com'
 # different end points to fetch data from
@@ -19,7 +17,10 @@ buckets = ['ecomerce-landing123', 'ecomerce-bronze123', 'ecomerce-silver123', 'e
 def create_s3_bucket():
     for bucket in buckets:
         try:
-            s3_client.create_bucket(Bucket=bucket)
+            s3_client.create_bucket(Bucket=bucket,
+                                    CreateBucketConfiguration = {
+                                        'LocationConstraint': 'eu-north-1'
+                                    })
             print(f"Created: {bucket}")
         except Exception as e:
             print(f"Error creating {bucket}: {e}")

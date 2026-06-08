@@ -1,8 +1,6 @@
-import boto3
 from datetime import datetime
-from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
-from utils import s3_client, glue_client, athena_client, get_spark
+from utils import boto3, s3_client, glue_client, athena_client, get_spark
 
 spark = get_spark()
 
@@ -64,7 +62,7 @@ def carts_line_items(carts):
 
 # Getting products information from products folder s3 bucket
 def get_products(products_infor):
-   bronze__products = products_infor.select(
+   bronze_products = products_infor.select(
       col("id").cast("int").alias("product_id"),
       col("title").cast("string").alias("title"),
       col("category").cast("string").alias("category"),
@@ -98,7 +96,7 @@ def get_products(products_infor):
     load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
+    bronze_products.write \
         .mode("append") \
         .parquet(
             f"s3a://ecomerce-bronze123/bronze_products/load_date={load_date}/"
@@ -111,7 +109,7 @@ def product_reviews(product_reviews):
       explode("reviews").alias("reviews")
    )
 
-   reviews = product_info.select(
+   bronze_reviews = product_info.select(
       col("product_id").cast("int"),
       col("reviews.rating").cast("int").alias("product_rating"),
       col("reviews.comment").cast("string").alias("comment"),
@@ -124,7 +122,7 @@ def product_reviews(product_reviews):
     load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
+    bronze_reviews.write \
         .mode("append") \
         .parquet(
             f"s3a://ecomerce-bronze123/bronze_product_reviews/load_date={load_date}/"
@@ -133,7 +131,7 @@ def product_reviews(product_reviews):
 
 def user_info(users_infor):
 
-    users = users_infor.select(
+    bronze_users = users_infor.select(
 
         col("id").cast("int").alias("user_id"),
         col("firstName").alias("first_name"),
@@ -169,7 +167,7 @@ def user_info(users_infor):
     load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
+    bronze_users.write \
         .mode("append") \
         .parquet(
             f"s3a://ecomerce-bronze123/bronze_user_infor/load_date={load_date}/"
@@ -177,7 +175,7 @@ def user_info(users_infor):
 
 def company_info(user_company):
 
-    company = user_company.select(
+    bronze_company = user_company.select(
         col("id").cast("int").alias("user_id"),
         # company identity
         col("company.name").alias("company_name"),
@@ -199,7 +197,7 @@ def company_info(user_company):
     load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
+    bronze_company.write \
         .mode("append") \
         .parquet(
             f"s3a://ecomerce-bronze123/bronze_user_company/load_date={load_date}/"
@@ -207,7 +205,7 @@ def company_info(user_company):
 
 def location_info(user_location):
 
-    location = user_location.select(
+    bronze_location = user_location.select(
         col("id").cast("int").alias("user_id"),
         col("address.address").alias("address_line"),
         col("address.city").alias("city"),
@@ -223,7 +221,7 @@ def location_info(user_location):
     load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
+    bronze_location.write \
         .mode("append") \
         .parquet(
             f"s3a://ecomerce-bronze123/bronze_user_location/load_date={load_date}/"
