@@ -153,13 +153,11 @@ def user_location_info(df):
     )
                                    
 # write function
-def write_to_s3(df, path, partition_col=None):
-    writer = df.write.mode("overwrite")
+def write_to_s3(df, path):
+    writer = df.write.mode("append").parquet(path)
 
-    if partition_col:
-        writer = writer.partitionBy(partition_col)
 
-    writer.parquet(path)
+    return writer
 
 
 
@@ -175,13 +173,40 @@ users_location_df = user_location_info(users_df)
                                    
                                    
                                    
-write_to_s3(cart_header_df, "s3://ecommerce-bronze90/bronze_cart_header/", "cart_id")
-write_to_s3(cart_items_df, "s3://ecommerce-bronze90/bronze_cart_items/", "cart_id")
-write_to_s3(products_df_clean, "s3://ecommerce-bronze90/bronze_products/", "product_id")
-write_to_s3(reviews_df, "s3://ecommerce-bronze90/bronze_reviews/", "product_id")
-write_to_s3(users_df_clean, "s3://ecommerce-bronze90/bronze_users/", "user_id")
-write_to_s3(users_company_df, "s3://ecommerce-bronze90/bronze_user_companies/", "user_id")
-write_to_s3(users_location_df, "s3://ecommerce-bronze90/bronze_user_locations/", "user_id")
+write_to_s3(
+    cart_header_df,
+    f"s3://ecommerce-bronze90/bronze_cart_header/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    cart_items_df,
+    f"s3://ecommerce-bronze90/bronze_cart_items/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    products_df_clean,
+    f"s3://ecommerce-bronze90/bronze_products/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    reviews_df,
+    f"s3://ecommerce-bronze90/bronze_reviews/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    users_df_clean,
+    f"s3://ecommerce-bronze90/bronze_users/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    users_company_df,
+    f"s3://ecommerce-bronze90/bronze_user_companies/run_date={RUN_DATE}/"
+)
+
+write_to_s3(
+    users_location_df,
+    f"s3://ecommerce-bronze90/bronze_user_locations/run_date={RUN_DATE}/"
+)
 
 
 
