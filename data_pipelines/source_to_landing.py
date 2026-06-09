@@ -1,20 +1,24 @@
 import requests as r 
 import json
 from datetime import datetime
-from utils import s3_client
+from utils.utils import s3_client
 
 
 
 base_url = 'https://dummyjson.com'
+
 # different end points to fetch data from
 endpoints = ['products', 'users', 'carts']
+
 # list of buckets to create in s3
-buckets = ['ecomerce-landing123', 'ecomerce-bronze123', 'ecomerce-silver123', 'ecomerce-gold321', 'athena-query-results-w3']
+buckets = ['ecommerce-bronze90', 'ecommerce-landing90', 'ecommerce-silver90', 'ecommerce-gold90', 'ecommerce-athena-query-results90']
 
 
 # create an s3 client to make api calls to s3 bucket in aws and create bucket
-
 def create_s3_bucket():
+    """
+    Create a bucket for landing, silver, bronze, gold and athena query results
+    """
     for bucket in buckets:
         try:
             s3_client.create_bucket(Bucket=bucket,
@@ -25,7 +29,9 @@ def create_s3_bucket():
         except Exception as e:
             print(f"Error creating {bucket}: {e}")
 
-def product_data_from_api(url, bucket_name="ecomerce-landing123"):
+
+# fetch product data from dummy json api
+def product_data_from_api(url, bucket_name="ecommerce-landing90"):
     """
     Fetch products from DummyJSON API and store each product as a JSON file in S3.
     """
@@ -52,7 +58,8 @@ def product_data_from_api(url, bucket_name="ecomerce-landing123"):
     return(f"Uploaded {len(products)}")
 
 
-def user_data_from_api(url, bucket_name="ecomerce-landing123"):
+# fetch user data from dummy json api
+def user_data_from_api(url, bucket_name="ecommerce-landing90"):
     """
     Fetch users from DummyJSON API and store each product as a JSON file in S3.
     """
@@ -78,7 +85,10 @@ def user_data_from_api(url, bucket_name="ecomerce-landing123"):
 
     return(f"Uploaded {len(user)}")
 
-def cart_data_from_api(url, bucket_name="ecomerce-landing123"):
+
+
+# fetch carts data from dummy json api
+def cart_data_from_api(url, bucket_name="ecommerce-landing90"):
     """
     Fetch carts from DummyJSON API and store each cart as a JSON file in S3.
     """

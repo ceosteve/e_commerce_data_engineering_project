@@ -2,16 +2,34 @@ from datetime import datetime
 from pyspark.sql.functions import *
 from utils import boto3, s3_client, glue_client, athena_client, get_spark
 
-spark = get_spark()
 
-#Read data from landing folder in aws s3
-carts_df = spark.read.json('s3a://ecomerce-landing123/carts/')
-products_df = spark.read.json('s3a://ecomerce-landing123/products/')
-users_df = spark.read.json('s3a://ecomerce-landing123/users/')
+# InIT Spark
+spark = get_spark()
+spark.conf.set("spark.sql.shuffle.partitions", "50")
+
+
+# compress parquet files
+spark.conf.set("spark.sql.parquet.compression.codec", "snappy")
+
+
+#Read data from landing buckets in aws s3
+carts_df = spark.read.json('s3a://ecomerce-landing123/carts/').cache()
+products_df = spark.read.json('s3a://ecomerce-landing123/products/').cache()
+users_df = spark.read.json('s3a://ecomerce-landing123/users/').cache()
+
+
+# materialize cache once
+users_df.count()
+carts_df.count()
+products_df.count()
+
 
 # Getting headers for carts
-def cart_header_create(carts_header):
-  bronze_cart_header = carts_header.select(
+def cart_header_create(carts):
+  """
+  get cart header columns from s3 and write to bronze with versioning
+  """
+  bronze_cart_header = carts.select(
       col("id").cast("int").alias("cart_id"),
       col("userId").cast("int").alias("user_id"),
       col("total").cast("double"),
@@ -19,24 +37,20 @@ def cart_header_create(carts_header):
       col("totalProducts").cast("int"),
       col("totalQuantity").cast("int")
   )
-  load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-  bronze_cart_header.write.mode("append").parquet(
-      f"s3a://ecomerce-bronze123/bronze_cart_header/load_date={load_date}/"
-  )
-
-  
 
 
 # Getting line items for carts
 def carts_line_items(carts):
-
+    """
+    get cart items columns from s3 and write to bronze with versioning
+    """
     # Flatten carts into individual products
     cart_items = carts.select(
         col("id").cast("int").alias("cart_id"),
         col("userId").cast("int").alias("user_id"),
         explode("products").alias("product")
-    )
+    ).cache()
 
     # Select required fields from exploded structure
     bronze_cart_items = cart_items.select(
@@ -51,19 +65,14 @@ def carts_line_items(carts):
         col("product.discountPercentage").cast("double").alias("discount_pct")
     )
 
-    # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Write to S3 (Bronze layer)
-    bronze_cart_items.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_cart_items/load_date={load_date}/"
-        )
 
 
 # Getting products information from products folder s3 bucket
 def get_products(products_infor):
+   """
+    get product columns from s3 and write to bronze with versioning
+    """
    bronze_products = products_infor.select(
       col("id").cast("int").alias("product_id"),
       col("title").cast("string").alias("title"),
@@ -94,18 +103,13 @@ def get_products(products_infor):
       
    )
 
-    # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Write to S3 (Bronze layer)
-    bronze_products.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_products/load_date={load_date}/"
-        )
 
 # Fetching product reviews 
 def product_reviews(product_reviews):
+   """
+    get product review columns from s3 and write to bronze with versioning
+    """
    product_info = product_reviews.select(
       col("id").cast("int").alias("product_id"),
       explode("reviews").alias("reviews")
@@ -120,19 +124,13 @@ def product_reviews(product_reviews):
       col("reviews.reviewerEmail").cast("string").alias("reviewer_email")
    )
 
-    # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Write to S3 (Bronze layer)
-    bronze_reviews.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_product_reviews/load_date={load_date}/"
-        )
-   
 
+# user info
 def user_info(users_infor):
-
+    """
+    get user columns from s3 and write to bronze with versioning
+    """
     bronze_users = users_infor.select(
 
         col("id").cast("int").alias("user_id"),
@@ -165,18 +163,13 @@ def user_info(users_infor):
 
     )
 
-        # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Write to S3 (Bronze layer)
-    bronze_users.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_user_infor/load_date={load_date}/"
-        )
 
-def company_info(user_company):
-
+# extract user company info
+def user_company_info(user_company):
+    """
+    get user company columns from s3 and write to bronze with versioning
+    """
     bronze_company = user_company.select(
         col("id").cast("int").alias("user_id"),
         # company identity
@@ -195,18 +188,13 @@ def company_info(user_company):
         col("company.address.coordinates.lng").cast("double").alias("company_lng")
     )
 
-        # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # Write to S3 (Bronze layer)
-    bronze_company.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_user_company/load_date={load_date}/"
-        )
 
-def location_info(user_location):
-
+# extract user location info
+def user_location_info(user_location):
+    """
+    get user location columns from s3 and write to bronze with versioning
+    """
     bronze_location = user_location.select(
         col("id").cast("int").alias("user_id"),
         col("address.address").alias("address_line"),
@@ -219,19 +207,71 @@ def location_info(user_location):
         col("address.coordinates.lng").cast("double").alias("lng")
     )
 
-        # Load timestamp partition
-    load_date = datetime.now().strftime("%Y%m%d_%H%M%S")
+ 
+#  write to s3
+def write_to_s3(df, path, partition_col=None, coalesce_n=4):
+    writer = df.coalesce(coalesce_n).write.mode("append").format("parquet")
 
-    # Write to S3 (Bronze layer)
-    bronze_location.write \
-        .mode("append") \
-        .parquet(
-            f"s3a://ecomerce-bronze123/bronze_user_location/load_date={load_date}/"
-        )
+    if partition_col:
+        writer = writer.partitionBy(partition_col)
 
-cart_header_create(carts_df)
-carts_line_items(carts_df)
+    writer.parquet(path)
 
+
+
+# run the pipeline 
+
+cart_header_df=cart_header_create(carts_df)
+cart_items_df=carts_line_items(carts_df)
+products_clean=get_products(products_df)
+reviews_df=product_reviews(products_df)
+users_clean=user_info(users_df)
+users_company=user_company_info(users_df)
+users_location=user_location_info(users_df)
+
+
+# write to s3
+write_to_s3(
+    cart_header_df,
+    f"s3a://ecommerce-bronze90/bronze_cart_header/",
+    partition_col="cart_id"
+)
+
+write_to_s3(
+    cart_items_df,
+    f"s3a://ecommerce-bronze90/bronze_cart_items/",
+    partition_col="cart_id"
+)
+
+write_to_s3(
+    products_clean,
+    f"s3a://ecommerce-bronze90/bronze_products/",
+    partition_col="product_id"
+)
+
+write_to_s3(
+    reviews_df,
+    f"s3a://ecommerce-bronze90/bronze_product_reviews/",
+    partition_col="product_id"
+)
+
+write_to_s3(
+    users_clean,
+    f"s3a://ecommerce-bronze90/bronze_users/",
+    partition_col="user_id"
+)
+
+write_to_s3(
+    users_company,
+    f"s3a://ecommerce-bronze90/bronze_user_companies",
+    partition_col="user_id`"
+)
+
+write_to_s3(
+    users_location,
+    f"s3a://ecommerce-bronze90/bronze_user_locations/",
+    partition_col="user_id"
+)
 
 
 

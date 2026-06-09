@@ -36,29 +36,28 @@ def get_spark():
         .config(
             "spark.jars.packages",
             "org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262"
-        ).getOrCreate())
+        )
+        # ⚡ PERFORMANCE TUNING
+        .config("spark.sql.shuffle.partitions", "50")
+        .config("spark.sql.parquet.compression.codec", "snappy")
+        .getOrCreate()
+    )
 
     hadoop_conf = spark._jsc.hadoopConfiguration()
 
-    hadoop_conf.set(
-        "fs.s3a.impl",
-        "org.apache.hadoop.fs.s3a.S3AFileSystem"
-    )
+    # S3A optimizations
+    hadoop_conf.set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+    hadoop_conf.set("fs.s3a.access.key", os.environ["AWS_ACCESS_KEY_ID"])
+    hadoop_conf.set("fs.s3a.secret.key", os.environ["AWS_SECRET_ACCESS_KEY"])
+    hadoop_conf.set("fs.s3a.endpoint", "s3.amazonaws.com")
 
-    hadoop_conf.set(
-        "fs.s3a.access.key",
-        os.environ["AWS_ACCESS_KEY_ID"]
-    )
+    hadoop_conf.set("fs.s3a.connection.maximum", "100")
+    hadoop_conf.set("fs.s3a.threads.max", "20")
+    hadoop_conf.set("fs.s3a.fast.upload", "true")
 
-    hadoop_conf.set(
-        "fs.s3a.secret.key",
-        os.environ["AWS_SECRET_ACCESS_KEY"]
-    )
+    return spark
 
-    hadoop_conf.set(
-        "fs.s3a.endpoint",
-        "s3.amazonaws.com"
-    )
+
 
 def create_glue_table(database, table_name, s3_path, columns, partition_keys=None):
     try:
