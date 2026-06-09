@@ -1,138 +1,109 @@
 from datetime import datetime
 from pyspark.sql.functions import *
-from utils import boto3, s3_client, glue_client, athena_client, get_spark
-
-
-# InIT Spark
-spark = get_spark()
-spark.conf.set("spark.sql.shuffle.partitions", "50")
-
-
-# compress parquet files
-spark.conf.set("spark.sql.parquet.compression.codec", "snappy")
-
-
-#Read data from landing buckets in aws s3
-carts_df = spark.read.json('s3a://ecomerce-landing123/carts/').cache()
-products_df = spark.read.json('s3a://ecomerce-landing123/products/').cache()
-users_df = spark.read.json('s3a://ecomerce-landing123/users/').cache()
-
-
-# materialize cache once
-users_df.count()
-carts_df.count()
-products_df.count()
-
-
-# Getting headers for carts
-def cart_header_create(carts):
-  """
-  get cart header columns from s3 and write to bronze with versioning
-  """
-  bronze_cart_header = carts.select(
-      col("id").cast("int").alias("cart_id"),
-      col("userId").cast("int").alias("user_id"),
-      col("total").cast("double"),
-      col("discountedTotal").cast("double"),
-      col("totalProducts").cast("int"),
-      col("totalQuantity").cast("int")
-  )
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
 
 
 
-# Getting line items for carts
-def carts_line_items(carts):
-    """
-    get cart items columns from s3 and write to bronze with versioning
-    """
-    # Flatten carts into individual products
-    cart_items = carts.select(
+# initialize glue 
+
+sc = SparkContext.getOrCreate()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+
+RUN_DATE = datetime.now().strftime("%Y%m%d")
+
+
+# read from the landing bucket 
+carts_df = spark.read.json("s3://ecommerce-landing90/carts/")
+products_df = spark.read.json("s3://ecommerce-landing90/products/")
+users_df = spark.read.json("s3://ecommerce-landing90/users/")
+
+
+print("CARTS:", carts_df.count())
+print("PRODUCTS:", products_df.count())
+print("USERS:", users_df.count())
+
+def cart_header(df):
+     return df.select(
         col("id").cast("int").alias("cart_id"),
         col("userId").cast("int").alias("user_id"),
-        explode("products").alias("product")
-    ).cache()
-
-    # Select required fields from exploded structure
-    bronze_cart_items = cart_items.select(
-        col("cart_id").cast("int"),
-        col("user_id").cast("int"),
-        col("product.id").cast("int").alias("product_id"),
-        col("product.title").cast("string").alias("title"),
-        col("product.price").cast("double").alias("price"),
-        col("product.quantity").cast("int").alias("quantity"),
-        col("product.total").cast("double").alias("line_total"),
-        col("product.discountedTotal").cast("double").alias("discounted_total"),
-        col("product.discountPercentage").cast("double").alias("discount_pct")
+        col("total").cast("double"),
+        col("discountedTotal").cast("double"),
+        col("totalProducts").cast("int"),
+        col("totalQuantity").cast("int"),
     )
 
 
+def carts_line_items(df):
+    exploded = df.select(
+        col("id").cast("int").alias("cart_id"),
+        col("userId").cast("int").alias("user_id"),
+        explode("products").alias("p")
+    )
 
+    return exploded.select(
+        col("cart_id"),
+        col("user_id"),
+        col("p.id").cast("int").alias("product_id"),
+        col("p.title").alias("title"),
+        col("p.price").cast("double").alias("price"),
+        col("p.quantity").cast("int").alias("quantity"),
+        col("p.total").cast("double").alias("line_total"),
+        col("p.discountedTotal").cast("double").alias("discounted_total"),
+        col("p.discountPercentage").cast("double").alias("discount_pct"),
+    )
+                                   
 
-# Getting products information from products folder s3 bucket
-def get_products(products_infor):
-   """
-    get product columns from s3 and write to bronze with versioning
-    """
-   bronze_products = products_infor.select(
-      col("id").cast("int").alias("product_id"),
-      col("title").cast("string").alias("title"),
-      col("category").cast("string").alias("category"),
-      col("price").cast("double").alias("price"),
-      col("discountPercentage").cast("double").alias("discount_percentage"),
-      col("rating").cast("double").alias("product_rating"),
-      col("stock").cast("int").alias("quantity_in_stock"),
-      col("tags")[0].cast("string").alias("tag_1"),
-      col("tags")[1].cast("string").alias("tag_2"),
-      col("brand").cast("string").alias("brand"),
-      col("sku").cast("string").alias("product_sku"),
-      col("weight").cast("double").alias("weight"),
-      col("dimensions.width").cast("double").alias("product_width"),
-      col("dimensions.height").cast("double").alias("product_height"),
-      col("dimensions.depth").cast("double").alias("product_depth"),
-      col("warrantyInformation").cast("string").alias("warranty_information"),
-      col("shippingInformation").cast("string").alias("shipping_information"),
-      col("availabilityStatus").cast("string").alias("availability_status"),
-      col("returnPolicy").cast("string").alias("return_policy"),
-      col("minimumOrderQuantity").cast("int").alias("minimum_order_quantity"),
-      col("meta.createdAt").cast("timestamp").alias("created_at"),
-      col("meta.updatedAt").cast("timestamp").alias("updated_at"),
-      col("meta.Barcode").cast("string").alias("bar_code"),
-      col("meta.qrCode").cast("string").alias("qr_code"),
-      col("images").cast("string").alias("product_image"),
-      col("thumbnail").cast("string").alias("product_thumbnail")      
-      
-   )
+def get_products(df):
+    return df.select(
+        col("id").cast("int").alias("product_id"),
+        col("title").cast("string").alias("title"),
+        col("category").cast("string").alias("category"),
+        col("price").cast("double").alias("price"),
+        col("discountPercentage").cast("double").alias("discount_percentage"),
+        col("rating").cast("double").alias("product_rating"),
+        col("stock").cast("int").alias("quantity_in_stock"),
+        col("tags")[0].cast("string").alias("tag_1"),
+        col("tags")[1].cast("string").alias("tag_2"),
+        col("brand").cast("string").alias("brand"),
+        col("sku").cast("string").alias("product_sku"),
+        col("weight").cast("double").alias("weight"),
+        col("dimensions.width").cast("double").alias("product_width"),
+        col("dimensions.height").cast("double").alias("product_height"),
+        col("dimensions.depth").cast("double").alias("product_depth"),
+        col("warrantyInformation").cast("string").alias("warranty_information"),
+        col("shippingInformation").cast("string").alias("shipping_information"),
+        col("availabilityStatus").cast("string").alias("availability_status"),
+        col("returnPolicy").cast("string").alias("return_policy"),
+        col("minimumOrderQuantity").cast("int").alias("minimum_order_quantity"),
+        col("meta.createdAt").cast("timestamp").alias("created_at"),
+        col("meta.updatedAt").cast("timestamp").alias("updated_at"),
+        col("meta.barcode").cast("string").alias("bar_code"),
+        col("meta.qrCode").cast("string").alias("qr_code"),
+        col("images").cast("string").alias("product_image"),
+        col("thumbnail").cast("string").alias("product_thumbnail"),
+    )
 
+                                   
+def product_reviews(df):
+    exploded = df.select(
+        col("id").cast("int").alias("product_id"),
+        explode("reviews").alias("r")
+    )
 
+    return exploded.select(
+        col("product_id"),
+        col("r.rating").cast("int").alias("product_rating"),
+        col("r.comment").alias("comment"),
+        col("r.date").cast("timestamp").alias("review_date"),
+        col("r.reviewerName").alias("reviewer_name"),
+        col("r.reviewerEmail").alias("reviewer_email"),
+    )
 
-# Fetching product reviews 
-def product_reviews(product_reviews):
-   """
-    get product review columns from s3 and write to bronze with versioning
-    """
-   product_info = product_reviews.select(
-      col("id").cast("int").alias("product_id"),
-      explode("reviews").alias("reviews")
-   )
-
-   bronze_reviews = product_info.select(
-      col("product_id").cast("int"),
-      col("reviews.rating").cast("int").alias("product_rating"),
-      col("reviews.comment").cast("string").alias("comment"),
-      col("reviews.date").cast("timestamp").alias("review_date"),
-      col("reviews.reviewerName").cast("string").alias("reviewer_name"),
-      col("reviews.reviewerEmail").cast("string").alias("reviewer_email")
-   )
-
-
-
-# user info
-def user_info(users_infor):
-    """
-    get user columns from s3 and write to bronze with versioning
-    """
-    bronze_users = users_infor.select(
-
+                                   
+def user_info(df):
+    return df.select(
         col("id").cast("int").alias("user_id"),
         col("firstName").alias("first_name"),
         col("lastName").alias("last_name"),
@@ -159,58 +130,31 @@ def user_info(users_infor):
         col("university"),
         col("crypto.coin").alias("crypto_coin"),
         sha2(col("crypto.wallet"), 256).alias("crypto_wallet_hash"),
-        col("crypto.network").alias("crypto_network")
-
+        col("crypto.network").alias("crypto_network"),
     )
 
-
-
-# extract user company info
-def user_company_info(user_company):
-    """
-    get user company columns from s3 and write to bronze with versioning
-    """
-    bronze_company = user_company.select(
-        col("id").cast("int").alias("user_id"),
-        # company identity
+                                   
+def user_company_info(df):
+    return df.select(
+        col("id").alias("user_id"),
         col("company.name").alias("company_name"),
-        col("company.department").alias("department"),
         col("company.title").alias("job_title"),
-        # company address
-        col("company.address.address").alias("company_address"),
-        col("company.address.city").alias("company_city"),
-        col("company.address.state").alias("company_state"),
-        col("company.address.stateCode").alias("company_state_code"),
-        col("company.address.postalCode").alias("company_postal_code"),
-        col("company.address.country").alias("company_country"),
-        # coordinates
-        col("company.address.coordinates.lat").cast("double").alias("company_lat"),
-        col("company.address.coordinates.lng").cast("double").alias("company_lng")
+        col("company.address.city").alias("city"),
     )
-
-
-
-# extract user location info
-def user_location_info(user_location):
-    """
-    get user location columns from s3 and write to bronze with versioning
-    """
-    bronze_location = user_location.select(
-        col("id").cast("int").alias("user_id"),
-        col("address.address").alias("address_line"),
+                                  
+                                   
+def user_location_info(df):
+    return df.select(
+        col("id").alias("user_id"),
         col("address.city").alias("city"),
-        col("address.state").alias("state"),
-        col("address.stateCode").alias("state_code"),
-        col("address.postalCode").alias("postal_code"),
         col("address.country").alias("country"),
         col("address.coordinates.lat").cast("double").alias("lat"),
-        col("address.coordinates.lng").cast("double").alias("lng")
+        col("address.coordinates.lng").cast("double").alias("lng"),
     )
-
- 
-#  write to s3
-def write_to_s3(df, path, partition_col=None, coalesce_n=4):
-    writer = df.coalesce(coalesce_n).write.mode("append").format("parquet")
+                                   
+# write function
+def write_to_s3(df, path, partition_col=None):
+    writer = df.write.mode("overwrite")
 
     if partition_col:
         writer = writer.partitionBy(partition_col)
@@ -219,63 +163,25 @@ def write_to_s3(df, path, partition_col=None, coalesce_n=4):
 
 
 
-# run the pipeline 
+# Execute Transformation                                
+cart_header_df = cart_header(carts_df)
+cart_items_df = carts_line_items(carts_df)
+products_df_clean = get_products(products_df)
+reviews_df = product_reviews(products_df)
+users_df_clean = user_info(users_df)
+users_company_df = user_company_info(users_df)
+users_location_df = user_location_info(users_df)
 
-cart_header_df=cart_header_create(carts_df)
-cart_items_df=carts_line_items(carts_df)
-products_clean=get_products(products_df)
-reviews_df=product_reviews(products_df)
-users_clean=user_info(users_df)
-users_company=user_company_info(users_df)
-users_location=user_location_info(users_df)
-
-
-# write to s3
-write_to_s3(
-    cart_header_df,
-    f"s3a://ecommerce-bronze90/bronze_cart_header/",
-    partition_col="cart_id"
-)
-
-write_to_s3(
-    cart_items_df,
-    f"s3a://ecommerce-bronze90/bronze_cart_items/",
-    partition_col="cart_id"
-)
-
-write_to_s3(
-    products_clean,
-    f"s3a://ecommerce-bronze90/bronze_products/",
-    partition_col="product_id"
-)
-
-write_to_s3(
-    reviews_df,
-    f"s3a://ecommerce-bronze90/bronze_product_reviews/",
-    partition_col="product_id"
-)
-
-write_to_s3(
-    users_clean,
-    f"s3a://ecommerce-bronze90/bronze_users/",
-    partition_col="user_id"
-)
-
-write_to_s3(
-    users_company,
-    f"s3a://ecommerce-bronze90/bronze_user_companies",
-    partition_col="user_id`"
-)
-
-write_to_s3(
-    users_location,
-    f"s3a://ecommerce-bronze90/bronze_user_locations/",
-    partition_col="user_id"
-)
-
-
-
-
+                                   
+                                   
+                                   
+write_to_s3(cart_header_df, "s3://ecommerce-bronze90/bronze_cart_header/", "cart_id")
+write_to_s3(cart_items_df, "s3://ecommerce-bronze90/bronze_cart_items/", "cart_id")
+write_to_s3(products_df_clean, "s3://ecommerce-bronze90/bronze_products/", "product_id")
+write_to_s3(reviews_df, "s3://ecommerce-bronze90/bronze_reviews/", "product_id")
+write_to_s3(users_df_clean, "s3://ecommerce-bronze90/bronze_users/", "user_id")
+write_to_s3(users_company_df, "s3://ecommerce-bronze90/bronze_user_companies/", "user_id")
+write_to_s3(users_location_df, "s3://ecommerce-bronze90/bronze_user_locations/", "user_id")
 
 
 
