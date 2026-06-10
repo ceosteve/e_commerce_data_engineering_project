@@ -22,7 +22,7 @@ def delete_versioned_object():
    """
   
 
-  bucket_name = 'ecommerce-bronze90'
+  bucket_name = 'ecommerce-silver90'
   paginator = s3_client.get_paginator("list_object_versions")
   pages = paginator.paginate(Bucket=bucket_name)
 
