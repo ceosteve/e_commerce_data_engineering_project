@@ -22,7 +22,7 @@ def delete_versioned_object():
    """
   
 
-  bucket_name = 'ecommerce-silver90'
+  bucket_name = 'ecommerce-glue-scripts90'
   paginator = s3_client.get_paginator("list_object_versions")
   pages = paginator.paginate(Bucket=bucket_name)
 
@@ -58,6 +58,21 @@ def delete_versioned_object():
      print(e)
 
   return
-        
 
-delete_versioned_object()
+
+def delete_bucket(bucket_name):
+    """
+    This function deletes an S3 bucket after ensuring that all objects (including versions) are removed.
+    """
+    delete_versioned_object()  # Ensure all versions and delete markers are removed
+
+    try:
+        s3_client.delete_bucket(Bucket=bucket_name)
+        print(f"Deleted bucket: {bucket_name}")
+    except Exception as e:
+        print(f"Error deleting bucket {bucket_name}: {e}")
+
+    return
+
+if __name__ == "__main__":
+    delete_bucket("ecommerce-glue-scripts90")
